@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="de.ragedev.example.dynamictoolbar.DynamicToolbarItemHandlerWrapper"
+            defaultHandler="de.ragedev.example.dynamictoolbar.dynamictoolbarhandler.DynamicToolbarItemHandlerWrapper"
             id="de.ragedev.example.dynamictoolbar.command.addtoolbarelement"
             name="Add Toolbar Element">
       </command>

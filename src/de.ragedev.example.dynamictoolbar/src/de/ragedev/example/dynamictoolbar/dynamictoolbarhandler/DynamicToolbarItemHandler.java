@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar;
+package de.ragedev.example.dynamictoolbar.dynamictoolbarhandler;
 
 import java.util.List;
 
@@ -9,6 +9,8 @@ import org.eclipse.e4.ui.model.application.ui.menu.MMenuFactory;
 import org.eclipse.e4.ui.model.application.ui.menu.MToolBar;
 import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.swt.widgets.Display;
+
+import de.ragedev.example.dynamictoolbar.Constants;
 
 public class DynamicToolbarItemHandler {
 

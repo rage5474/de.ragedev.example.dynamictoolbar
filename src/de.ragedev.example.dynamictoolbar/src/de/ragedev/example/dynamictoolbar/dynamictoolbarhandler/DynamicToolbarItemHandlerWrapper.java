@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar;
+package de.ragedev.example.dynamictoolbar.dynamictoolbarhandler;
 
 import org.eclipse.e4.tools.compat.parts.DIHandler;
 
