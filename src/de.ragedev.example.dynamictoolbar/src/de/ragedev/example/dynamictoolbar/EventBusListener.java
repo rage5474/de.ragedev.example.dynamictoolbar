@@ -16,7 +16,7 @@ import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
 
 @Component(immediate = true, enabled = true, property = "event.topics=de/ragedev/event/*")
-public class EventListener implements EventHandler {
+public class EventBusListener implements EventHandler {
 
 	@Override
 	public void handleEvent(Event event) {
