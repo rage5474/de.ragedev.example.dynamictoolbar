@@ -10,7 +10,7 @@ import org.eclipse.e4.ui.model.application.ui.menu.MToolBar;
 import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.swt.widgets.Display;
 
-public class DynamicToobarItemHandler {
+public class DynamicToolbarItemHandler {
 
 	@Execute
 	public void execute(MApplication application) {
