@@ -9,7 +9,7 @@
             name="Add Toolbar Element">
       </command>
       <command
-            defaultHandler="de.ragedev.example.dynamictoolbar.EventBusTriggerHandler"
+            defaultHandler="de.ragedev.example.dynamictoolbar.eventbus.EventBusTriggerHandler"
             id="de.ragedev.example.dynamictoolbar.command.triggereventbus"
             name="Trigger Event Bus">
       </command>

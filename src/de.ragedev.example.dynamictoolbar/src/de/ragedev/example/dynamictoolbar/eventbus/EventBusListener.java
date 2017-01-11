@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar;
+package de.ragedev.example.dynamictoolbar.eventbus;
 
 import org.eclipse.core.commands.Command;
 import org.eclipse.core.commands.ExecutionException;
@@ -14,6 +14,8 @@ import org.eclipse.ui.services.IServiceLocator;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
+
+import de.ragedev.example.dynamictoolbar.Constants;
 
 @Component(immediate = true, enabled = true, property = "event.topics=de/ragedev/event/*")
 public class EventBusListener implements EventHandler {
