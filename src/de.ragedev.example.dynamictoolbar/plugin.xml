@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.ragedev.example.dynamictoolbar.DynamicToobarItemHandlerWrapper"
+            id="de.ragedev.example.dynamictoolbar.command.addtoolbarelement"
+            name="Add Toolbar Element">
+      </command>
+      <command
+            defaultHandler="de.ragedev.example.dynamictoolbar.EventBusTriggerHandler"
+            id="de.ragedev.example.dynamictoolbar.command.triggereventbus"
+            name="Trigger Event Bus">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="Ragedev">
+            <command
+                  commandId="de.ragedev.example.dynamictoolbar.command.triggereventbus"
+                  label="Trigger Event Bus"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
