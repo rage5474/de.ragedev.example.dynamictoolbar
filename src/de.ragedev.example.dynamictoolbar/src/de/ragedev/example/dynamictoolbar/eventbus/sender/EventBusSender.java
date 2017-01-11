@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar.eventbus;
+package de.ragedev.example.dynamictoolbar.eventbus.sender;
 
 import java.util.Collections;
 

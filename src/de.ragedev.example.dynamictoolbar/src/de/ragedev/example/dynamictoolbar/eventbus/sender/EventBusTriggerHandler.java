@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar.eventbus;
+package de.ragedev.example.dynamictoolbar.eventbus.sender;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
