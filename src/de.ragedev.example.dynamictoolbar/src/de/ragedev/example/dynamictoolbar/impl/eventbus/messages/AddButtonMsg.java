@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar.eventbus.ids;
+package de.ragedev.example.dynamictoolbar.impl.eventbus.messages;
 
 import de.ragedev.example.dynamictoolbar.api.eventbusids.EventBusMsgConstants;
 

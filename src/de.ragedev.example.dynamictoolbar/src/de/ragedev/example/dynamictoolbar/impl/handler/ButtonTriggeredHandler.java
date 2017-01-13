@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar.handler;
+package de.ragedev.example.dynamictoolbar.impl.handler;
 
 import java.util.Map;
 
@@ -8,8 +8,8 @@ import org.eclipse.core.commands.ExecutionException;
 
 import de.ragedev.example.dynamictoolbar.api.PluginConstants;
 import de.ragedev.example.dynamictoolbar.api.eventbusids.ButtonTriggeredMsg;
-import de.ragedev.example.dynamictoolbar.eventbus.utils.EventBusPropertiesBuilder;
-import de.ragedev.example.dynamictoolbar.eventbus.utils.EventBusSender;
+import de.ragedev.example.dynamictoolbar.impl.eventbus.utils.EventBusPropertiesBuilder;
+import de.ragedev.example.dynamictoolbar.impl.eventbus.utils.EventBusSender;
 
 public class ButtonTriggeredHandler extends AbstractHandler{
 

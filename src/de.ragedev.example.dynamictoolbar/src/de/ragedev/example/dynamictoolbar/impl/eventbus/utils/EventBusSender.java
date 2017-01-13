@@ -1,4 +1,4 @@
-package de.ragedev.example.dynamictoolbar.eventbus.utils;
+package de.ragedev.example.dynamictoolbar.impl.eventbus.utils;
 
 import java.util.Map;
 

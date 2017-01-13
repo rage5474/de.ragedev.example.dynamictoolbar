@@ -5,9 +5,9 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 
-import de.ragedev.example.dynamictoolbar.eventbus.ids.AddButtonMsg;
-import de.ragedev.example.dynamictoolbar.eventbus.utils.EventBusPropertiesBuilder;
-import de.ragedev.example.dynamictoolbar.eventbus.utils.EventBusSender;
+import de.ragedev.example.dynamictoolbar.impl.eventbus.messages.AddButtonMsg;
+import de.ragedev.example.dynamictoolbar.impl.eventbus.utils.EventBusPropertiesBuilder;
+import de.ragedev.example.dynamictoolbar.impl.eventbus.utils.EventBusSender;
 
 public class EventBusTriggerHandler extends AbstractHandler {
 
