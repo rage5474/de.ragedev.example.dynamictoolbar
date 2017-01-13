@@ -7,7 +7,6 @@ import org.osgi.service.event.EventHandler;
 import de.ragedev.example.dynamictoolbar.api.DynamicToolBarButtonRegistration;
 import de.ragedev.example.dynamictoolbar.api.DynamicToolBarButtonRegistrationFactory;
 import de.ragedev.example.dynamictoolbar.api.PluginConstants;
-import de.ragedev.example.dynamictoolbar.impl.DynamicToolBarButtonRegistrationImpl;
 
 @Component(immediate = true, enabled = true, property = "event.topics=de/ragedev/event/addbutton")
 public class AddButtonEventBusListener implements EventHandler {
@@ -25,7 +24,6 @@ public class AddButtonEventBusListener implements EventHandler {
 		String iconURI = "platform:/plugin/" + PluginConstants.PLUGIN_ID + "/" + PATH_TO_IMG;
 
 		dynamicToolBarButtonRegistration.registerButton(name, buttonLabel, iconURI);
-//		DynamicToolBarButtonRegistrationImpl.registerButton(name, buttonLabel, iconURI);
 
 		// Optional: If toolbar shall be set
 		// String toolbarID = "org.eclipse.ui.workbench.file";
