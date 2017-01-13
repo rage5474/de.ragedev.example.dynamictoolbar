@@ -4,14 +4,43 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="de.ragedev.example.dynamictoolbar.dynamictoolbarhandler.DynamicToolbarItemHandlerWrapper"
-            id="de.ragedev.example.dynamictoolbar.command.addtoolbarelement"
-            name="Add Toolbar Element">
-      </command>
-      <command
-            defaultHandler="de.ragedev.example.dynamictoolbar.eventbus.sender.EventBusTriggerHandler"
+            defaultHandler="de.ragedev.example.dynamictoolbar.extern.EventBusTriggerHandler"
             id="de.ragedev.example.dynamictoolbar.command.triggereventbus"
             name="Trigger Event Bus">
+      </command>
+      <command
+            id="mycommand.id"
+            name="mycommand">
+         <commandParameter
+               id="mycommand.buttonname"
+               name="mycommand.buttonname"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="mycommand.buttonname"
+               name="buttonname"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="mycommand.buttonname"
+               name="name"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="mycommand.buttonname"
+               name="buttonname"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="mycommand.buttonname"
+               name="buttonname"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="mycommand.buttonname"
+               name="name"
+               optional="true">
+         </commandParameter>
       </command>
    </extension>
    <extension
@@ -28,6 +57,13 @@
             </command>
          </menu>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.ragedev.example.dynamictoolbar.handler.ButtonTriggeredHandler"
+            commandId="mycommand.id">
+      </handler>
    </extension>
 
 </plugin>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" enabled="true" immediate="true" name="de.ragedev.example.dynamictoolbar.eventbus.receiver.EventBusListener">
-   <property name="event.topics" value="de/ragedev/event/*"/>
-   <service>
-      <provide interface="org.osgi.service.event.EventHandler"/>
-   </service>
-   <implementation class="de.ragedev.example.dynamictoolbar.eventbus.receiver.EventBusListener"/>
-</scr:component>
