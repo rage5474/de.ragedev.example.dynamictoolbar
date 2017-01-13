@@ -6,12 +6,15 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 
+import de.ragedev.example.dynamictoolbar.api.PluginConstants;
 import de.ragedev.example.dynamictoolbar.api.eventbusids.ButtonTriggeredMsg;
 import de.ragedev.example.dynamictoolbar.eventbus.utils.EventBusPropertiesBuilder;
 import de.ragedev.example.dynamictoolbar.eventbus.utils.EventBusSender;
 
 public class ButtonTriggeredHandler extends AbstractHandler{
 
+	
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		EventBusSender.sendMessage(ButtonTriggeredMsg.getID(), extractProperties(event));
@@ -19,7 +22,7 @@ public class ButtonTriggeredHandler extends AbstractHandler{
 	}
 
 	private Map<String, String> extractProperties(ExecutionEvent event) {
-		String name = event.getParameter("mycommand.buttonname");
+		String name = event.getParameter(PluginConstants.ADD_BUTTON_COMMAND_PARAM_KEY);
 		return new EventBusPropertiesBuilder().addParameter(ButtonTriggeredMsg.getNameParam(), name).build();
 	}
 	

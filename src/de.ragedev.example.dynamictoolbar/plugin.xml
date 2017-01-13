@@ -9,36 +9,11 @@
             name="Trigger Event Bus">
       </command>
       <command
-            id="mycommand.id"
-            name="mycommand">
+            id="de.ragedev.eclipse.dynamictoolbar.addbutton.command"
+            name="Add Button">
          <commandParameter
-               id="mycommand.buttonname"
-               name="mycommand.buttonname"
-               optional="true">
-         </commandParameter>
-         <commandParameter
-               id="mycommand.buttonname"
-               name="buttonname"
-               optional="true">
-         </commandParameter>
-         <commandParameter
-               id="mycommand.buttonname"
-               name="name"
-               optional="true">
-         </commandParameter>
-         <commandParameter
-               id="mycommand.buttonname"
-               name="buttonname"
-               optional="true">
-         </commandParameter>
-         <commandParameter
-               id="mycommand.buttonname"
-               name="buttonname"
-               optional="true">
-         </commandParameter>
-         <commandParameter
-               id="mycommand.buttonname"
-               name="name"
+               id="de.ragedev.eclipse.dynamictoolbar.addbutton.command.parameter.buttonname"
+               name="de.ragedev.eclipse.dynamictoolbar.addbutton.command.parameter.buttonname"
                optional="true">
          </commandParameter>
       </command>
@@ -62,7 +37,7 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="de.ragedev.example.dynamictoolbar.handler.ButtonTriggeredHandler"
-            commandId="mycommand.id">
+            commandId="de.ragedev.eclipse.dynamictoolbar.addbutton.command">
       </handler>
    </extension>
 

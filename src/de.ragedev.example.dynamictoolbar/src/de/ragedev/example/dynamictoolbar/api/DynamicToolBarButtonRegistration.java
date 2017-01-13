@@ -25,34 +25,41 @@ public class DynamicToolBarButtonRegistration {
 		MApplication application = context.get(MApplication.class);
 		EModelService modelService = (EModelService) context.get(EModelService.class.getName());
 		
-		MCommand command = null;
+		MCommand command = getAddButtonCommand(application, modelService);
+		
+		if(command != null)
+		{
+			List<MToolBar> toolbars = modelService.findElements(application, null, MToolBar.class, null);
+			for (MToolBar mToolBar : toolbars) {
+				if (mToolBar.getElementId().equals(toolbarID)) {
+					MHandledToolItem handledToolItem = MMenuFactory.INSTANCE.createHandledToolItem();
+					handledToolItem.setCommand(command);
+					handledToolItem.setLabel(buttonLabel);
+					handledToolItem.setIconURI(iconURI);
+					MParameter parameter = MCommandsFactory.INSTANCE.createParameter();
+					parameter.setElementId(PluginConstants.ADD_BUTTON_COMMAND_PARAM_KEY);
+					parameter.setName(PluginConstants.ADD_BUTTON_COMMAND_PARAM_KEY);
+					parameter.setValue(name);
+					
+					handledToolItem.getParameters().add(parameter);
+					Display.getDefault().asyncExec(() -> {
+						mToolBar.getChildren().add(handledToolItem);
+					});
+					
+				}
+			}
+		}
+	}
+
+	private static MCommand getAddButtonCommand(MApplication application, EModelService modelService) {
 		List<MCommand> commands = modelService.findElements(application, null, MCommand.class, null);
 		for (MCommand mCommand : commands) {
-			if(mCommand.getElementId().equals("mycommand.id"))
+			if(mCommand.getElementId().equals(PluginConstants.ADD_BUTTON_COMMAND_KEY))
 			{
-				command = mCommand;
+				return mCommand;
 			}
 		}
-		
-		List<MToolBar> toolbars = modelService.findElements(application, null, MToolBar.class, null);
-		for (MToolBar mToolBar : toolbars) {
-			if (mToolBar.getElementId().equals(toolbarID)) {
-				MHandledToolItem handledToolItem = MMenuFactory.INSTANCE.createHandledToolItem();
-				handledToolItem.setCommand(command);
-				handledToolItem.setLabel(buttonLabel);
-				handledToolItem.setIconURI(iconURI);
-				MParameter parameter = MCommandsFactory.INSTANCE.createParameter();
-				parameter.setElementId("mycommand.buttonname");
-				parameter.setName("mycommand.buttonname");
-				parameter.setValue(name);
-				
-				handledToolItem.getParameters().add(parameter);
-				Display.getDefault().asyncExec(() -> {
-					mToolBar.getChildren().add(handledToolItem);
-				});
-
-			}
-		}
+		return null;
 	}
 
 }
