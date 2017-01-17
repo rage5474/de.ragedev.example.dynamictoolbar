@@ -1,0 +1,8 @@
+target "DynamicToolBar" with source requirements
+location "http://download.eclipse.org/releases/neon/" eclipse-mars {
+	org.eclipse.sdk.feature.group
+	org.eclipse.equinox.executable.feature.group
+	
+	org.eclipse.core.commands
+	org.eclipse.e4.tools.compat
+} 

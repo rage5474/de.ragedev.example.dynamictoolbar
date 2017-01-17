@@ -8,7 +8,6 @@
 
 	<properties>
 		<tycho.version>0.24.0</tycho.version>
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -49,9 +48,9 @@
 		<module>../de.ragedev.eclipse.dynamictoolbar</module>
 		<module>../de.ragedev.eclipse.dynamictoolbar.tests</module>
 		<module>../de.ragedev.eclipse.dynamictoolbar.feature</module>
-
 		<module>../de.ragedev.eclipse.dynamictoolbar.tycho.p2</module>
-		<module>../de.ragedev.eclipse.dynamictoolbar.tycho.product</module>
 		<module>../de.ragedev.eclipse.dynamictoolbar.tycho.releng.targetplatform</module>
+		
+		<!--  module>../de.ragedev.eclipse.dynamictoolbar.tycho.product</module -->
 	</modules>
 </project>
